@@ -1,0 +1,53 @@
+group_id: G189
+problem_id: MP055
+data_issues:
+  leaking_column:
+    present: true
+    column: kg_weighed_at_factory
+  unit_mixup:
+    present: false
+    column: null
+    group_value: null
+    factor: null
+  sentinel_value:
+    present: true
+    column: rain_mm_week
+    value: -1
+    count: 53
+  duplicate_rows:
+    present: true
+    count: 30
+  stuck_sensor:
+    present: false
+    column: null
+    start_date: null
+    end_date: null
+  target_typos:
+    present: true
+    count: 11
+  spelling_variants:
+    present: true
+    column: flush
+    true_levels: 3
+tracking:
+  experiment_name: null
+  best_run_id: null
+  registered_model_name: null
+  champion_version: null
+monitoring:
+  psi:
+    worker_exp_yr: null
+    rain_mm_week: null
+    slope_deg: null
+    temp_c: null
+    bush_age_yr: null
+    hours_worked: null
+  most_drifted_feature: null
+  mae_by_group:
+    Upper Garden: null
+    Lower Garden: null
+    River Side: null
+  worst_served_group: null
+  mae_v1_on_check: null
+  mae_v2_on_check: null
+  decision: null
