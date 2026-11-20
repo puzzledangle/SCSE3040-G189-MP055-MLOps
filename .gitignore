@@ -1,0 +1,28 @@
+# Environment
+.venv/
+venv/
+ENV/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# MLflow
+mlruns/
+mlartifacts/
+# NOTE: mlflow.db is committed as per student handbook Section 5 and 8
+
+# Data files handled by DVC / raw data
+data/raw/train.csv
+data/raw/later.csv
+data/train.csv
+data/later.csv
+data/holdout_features.csv
+!data/raw/holdout_features.csv
+
+# Briefs and reference docs
+GROUP.md
+PROBLEM.md
+STUDENT_HANDBOOK.md
