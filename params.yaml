@@ -1,15 +1,15 @@
 data:
-  raw_train_path: "data/raw/train.csv"
-  raw_later_path: "data/raw/later.csv"
-  raw_holdout_path: "data/raw/holdout_features.csv"
-  cleaned_train_path: "data/cleaned_train.csv"
-  cleaned_later_path: "data/cleaned_later.csv"
-  train_sha256: "6020af436b7be732e3a173de343a283f4cd9166c1a8d470fa0656a52a7ff468f"
-
+  raw_train_path: data/raw/train.csv
+  raw_later_path: data/raw/later.csv
+  raw_holdout_path: data/raw/holdout_features.csv
+  cleaned_train_path: data/cleaned_train.csv
+  cleaned_later_path: data/cleaned_later.csv
+  train_sha256: 6020af436b7be732e3a173de343a283f4cd9166c1a8d470fa0656a52a7ff468f
 settings:
   random_seed: 42
-
 model:
-  target: "kg_per_worker"
-  algorithm: null
-  hyperparameters: {}
+  target: kg_per_worker
+  algorithm: Ridge
+  hyperparameters:
+    alpha: 1.0
+  val_mae: 1.5146
