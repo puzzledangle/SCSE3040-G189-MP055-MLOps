@@ -11,9 +11,9 @@
 ## Group Members
 | Enrolment No. | Name | Role |
 | :--- | :--- | :--- |
-| **S24CSEU2337** | Parth Makkar | Data Lead |
-| **S24CSEU2304** | Agrim Aggarwal | Model Lead |
-| **S24CSEU2331** | Alankrit Kasana | Ops Lead & Service Lead |
+| **S24CSEU2331** | Alankrit Kasana | Model Lead & Ops Lead |
+| **S24CSEU2304** | Agrim Aggarwal | Data Lead |
+| **S24CSEU2337** | Parth Makkar | Service Lead |
 | **S24CSEU2298** | HIMANSHI. | Member |
 
 ## Project Description
@@ -47,4 +47,22 @@ dvc status
 Execute the Stage 1 data checks on raw training data:
 ```bash
 python -m src.mp055.run_checks
+```
+
+### 4. Data Cleaning (Stage 2)
+Clean raw training data by resolving anomalies:
+```bash
+python -m src.mp055.clean
+```
+
+### 5. Model Training & MLflow Tracking (Stage 2)
+Train regression pipelines across candidate settings, log to SQLite MLflow, and register `@champion`:
+```bash
+python -m src.mp055.train
+```
+
+### 6. Running Tests
+Execute the full test suite with pytest:
+```bash
+pytest
 ```
