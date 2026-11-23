@@ -21,6 +21,7 @@ data/train.csv
 data/later.csv
 data/holdout_features.csv
 !data/raw/holdout_features.csv
+data/cleaned_*.csv
 
 # Briefs and reference docs
 GROUP.md
