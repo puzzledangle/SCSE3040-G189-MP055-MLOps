@@ -30,10 +30,10 @@ data_issues:
     column: flush
     true_levels: 3
 tracking:
-  experiment_name: null
-  best_run_id: null
-  registered_model_name: null
-  champion_version: null
+  experiment_name: mp055-tea-yield
+  best_run_id: cef477f1419c4428a728900545dd8456
+  registered_model_name: mp055-model
+  champion_version: 1
 monitoring:
   psi:
     worker_exp_yr: null
