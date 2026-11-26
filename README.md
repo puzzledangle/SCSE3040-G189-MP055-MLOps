@@ -66,3 +66,33 @@ Execute the full test suite with pytest:
 ```bash
 pytest
 ```
+
+### 7. Running the FastAPI Service (Stage 3)
+Start the inference server locally:
+```bash
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
+Test the health probe:
+```bash
+curl http://localhost:8000/health
+```
+Test prediction endpoint:
+```bash
+curl -X POST http://localhost:8000/predict \
+  -H "Content-Type: application/json" \
+  -d '{"worker_exp_yr": 8, "rain_mm_week": 135.0, "slope_deg": 16, "temp_c": 23.0, "bush_age_yr": 30, "hours_worked": 7.5, "flush": "first", "section": "Upper Garden"}'
+```
+
+### 8. Containerization with Docker (Stage 3)
+Build and run the container:
+```bash
+docker build -t mp055-api:1.0 .
+docker run -d -p 8000:8000 --name mp055-service mp055-api:1.0
+```
+
+### 9. Kubernetes Orchestration (Stage 3)
+Deploy the 4-replica service to Kubernetes:
+```bash
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+```
